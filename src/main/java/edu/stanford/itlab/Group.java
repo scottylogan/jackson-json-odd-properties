@@ -64,7 +64,7 @@ public class Group {
 	/**
 	 * @param lsjuGroup the lsjuGroup to set
 	 */
-	public void setLsjuGroup(StanfordGroup ljsuGroup) {
-		this.lsjuGroup = ljsuGroup;
+	public void setLsjuGroup(StanfordGroup lsjuGroup) {
+		this.lsjuGroup = lsjuGroup;
 	}
 }

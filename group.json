@@ -1,0 +1,10 @@
+{
+  "schemas": [ "urn:mace:schemata:group", "urn:lsju:schemata:group" ],
+  "name": "bar:foo",
+  "displayName": "All the patrons at Foo",
+  "urn:lsju:schemata:group": {
+    "isNestable": true,
+    "orgId": "CXXY",
+    "publicKeys": [ "...", "..." ]
+  }
+}
