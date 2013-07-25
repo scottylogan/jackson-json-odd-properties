@@ -3,51 +3,31 @@
  */
 package edu.stanford.itlab;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * @author swl
  *
  */
-public class StanfordGroup {
-	@JsonProperty("isNestable")
-	private boolean nestable;
-	private String orgId;
-	private String[] publicKeys;
+@JsonIgnoreProperties(ignoreUnknown=true)
+public class StanfordGroup extends Group {
+
+	@JsonProperty("urn:lsju:schemata:group")
+	private StanfordGroupData stanfordGroupData;
+
 	/**
-	 * @return the nestable
+	 * @return the stanfordGroupData
 	 */
-	public boolean isNestable() {
-		return nestable;
+	public StanfordGroupData getStanfordGroupData() {
+		return stanfordGroupData;
 	}
+
 	/**
-	 * @param nestable the nestable to set
+	 * @param stanfordGroupData the stanfordGroupData to set
 	 */
-	public void setNestable(boolean isNestable) {
-		this.nestable = isNestable;
+	public void setStanfordGroupData(StanfordGroupData stanfordGroupData) {
+		this.stanfordGroupData = stanfordGroupData;
 	}
-	/**
-	 * @return the orgId
-	 */
-	public String getOrgId() {
-		return orgId;
-	}
-	/**
-	 * @param orgId the orgId to set
-	 */
-	public void setOrgId(String orgId) {
-		this.orgId = orgId;
-	}
-	/**
-	 * @return the publicKeys
-	 */
-	public String[] getPublicKeys() {
-		return publicKeys;
-	}
-	/**
-	 * @param publicKeys the publicKeys to set
-	 */
-	public void setPublicKeys(String[] publicKeys) {
-		this.publicKeys = publicKeys;
-	}
+
 }

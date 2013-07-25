@@ -23,9 +23,9 @@ public class JSONTest {
 	 */
 	public static void main(String[] args) {
 		ObjectMapper mapper = new ObjectMapper();
-		Group group = null;
+		StanfordGroup group = null;
 		try {
-			group = mapper.readValue(new File("group.json"), Group.class);
+			group = mapper.readValue(new File("group.json"), StanfordGroup.class);
 		} catch (JsonParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -37,7 +37,7 @@ public class JSONTest {
 			e.printStackTrace();
 		}
 		System.out.println("Name:           " + group.getName());
-		System.out.println("Stanford OrgID: " + group.getLsjuGroup().getOrgId());
+		System.out.println("Stanford OrgID: " + group.getStanfordGroupData().getOrgId());
 	}
 
 }

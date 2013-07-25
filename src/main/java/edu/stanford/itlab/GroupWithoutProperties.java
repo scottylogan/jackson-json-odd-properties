@@ -10,11 +10,13 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
  *
  */
 @JsonIgnoreProperties(ignoreUnknown=true)
-public class Group {
+public class GroupWithoutProperties {
 	private String[] schemas;
 	private String name;
 	private String displayName;
 	
+	private StanfordGroupData urnLsjuSchemataGroup;
+
 	/**
 	 * @return the schemas
 	 */
@@ -50,5 +52,17 @@ public class Group {
 	 */
 	public void setDisplayName(String displayName) {
 		this.displayName = displayName;
+	}
+	/**
+	 * @return the urnLsjuSchemataGroup
+	 */
+	public StanfordGroupData getUrnLsjuSchemataGroup() {
+		return urnLsjuSchemataGroup;
+	}
+	/**
+	 * @param urnLsjuSchemataGroup the urnLsjuSchemataGroup to set
+	 */
+	public void setUrnLsjuSchemataGroup(StanfordGroupData lsjuGroup) {
+		this.urnLsjuSchemataGroup = lsjuGroup;
 	}
 }

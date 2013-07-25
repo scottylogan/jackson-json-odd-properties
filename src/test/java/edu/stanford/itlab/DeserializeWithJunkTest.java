@@ -37,9 +37,9 @@ public class DeserializeWithJunkTest {
 	public void test() throws JsonParseException, JsonMappingException, IOException {
 		ObjectMapper mapper = new ObjectMapper();
 
-		Group group = mapper.readValue(GROUP, Group.class);
+		StanfordGroup group = mapper.readValue(GROUP, StanfordGroup.class);
 
 		assertEquals(NAME, group.getName());
-		assertEquals(ORGID, group.getLsjuGroup().getOrgId());
+		assertEquals(ORGID, group.getStanfordGroupData().getOrgId());
 	}
 }

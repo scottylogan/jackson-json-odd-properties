@@ -22,20 +22,21 @@ public class SerializeTest {
 		"{"
 		+ "\"schemas\":[\"urn:mace:schemata:group\",\"urn:lsju:schemata:group\"],"
 		+ "\"name\":\"" + NAME + "\",\"displayName\":\"Test Group\","
-		+ "\"urn:lsju:schemata:group\":{\"orgId\":\"" + ORGID + "\",\"publicKeys\":null,\"isNestable\":false}"
+		+ "\"urn:lsju:schemata:group\":{\"orgId\":\"" + ORGID + "\",\"publicKeys\":null,"
+		+ "\"description\":null,\"isNestable\":false}"
 		+ "}";
 	
 
 	@Test
 	public void test() throws JsonProcessingException {
-		StanfordGroup lsjuGroup = new StanfordGroup();
-		lsjuGroup.setNestable(false);
-		lsjuGroup.setOrgId(ORGID);
-		Group group = new Group();
+		StanfordGroupData stanfordGroupData = new AugmentedStanfordGroupData();
+		stanfordGroupData.setNestable(false);
+		stanfordGroupData.setOrgId(ORGID);
+		StanfordGroup group = new StanfordGroup();
 		group.setName(NAME);
 		group.setDisplayName("Test Group");
 		group.setSchemas(new String[] { "urn:mace:schemata:group", "urn:lsju:schemata:group" });
-		group.setLsjuGroup(lsjuGroup);
+		group.setStanfordGroupData(stanfordGroupData);
 		ObjectMapper mapper = new ObjectMapper();
 		String json = mapper.writeValueAsString(group);
 		assertEquals(GROUP, json);

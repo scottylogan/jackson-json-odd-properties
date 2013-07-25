@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<group xmlns= "urn:mace:schemata:group"
+  xmlns:lsju="urn:lsju:schemata:group">
+  <name>bar:foo</name>
+  <displayName>All the patrons at Foo<displayName/>
+  <lsju:isNestable>true</lsju:isNestable>
+  <lsju:orgId>CXXY"</lsju:orgId>
+  <lsju:publicKeys>
+    <lsju:publicKey>
+      ...
+    </lsju:publicKey>
+    <lsju:publicKey>
+      ...
+    </lsju:publicKey>
+  </lsju:publicKeys>
+</group>
+
